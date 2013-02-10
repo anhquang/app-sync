@@ -1,0 +1,12 @@
+--- cpu/avr/dev/clock-avr.h
++++ cpu/avr/dev/clock-avr.h
+@@ -113,7 +113,8 @@
+    * Raise interrupt when value in OCR2 is reached. Note that the \
+    * counter value in TCNT2 is cleared automatically. \
+    */ \
+-  TIMSK2 = _BV (OCIE2A);
++  TIMSK2 = _BV (OCIE2A); \
++  DDRD |= _BV(DDD7);
+ 
+ /* Defines used by clock_get_time and clock_adjust_time in clock.c */
+ #define CLOCK_COUNTER_REGISTER TCNT2

@@ -1,0 +1,2 @@
+blink-leds_src = blink-leds.c
+include $(CONTIKI)/Makefile.include
